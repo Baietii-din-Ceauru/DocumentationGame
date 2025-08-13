@@ -1,0 +1,13 @@
+name: Enforce PR Source
+
+on:
+  pull_request:
+    branches:
+      - main  # This triggers only when PR targets main
+
+jobs:
+  enforce:
+    uses: Baietii-din-Ceauru/.github/.github/workflows/enforce-pr-source.yml@main
+    with:
+      target_branch: main
+      required_source: staging
